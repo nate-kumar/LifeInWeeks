@@ -1,0 +1,24 @@
+// :host {
+//     --columns: 5;
+//     --rows: 3;
+// }
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 30px);
+}
+
+.grid-row {
+    display: grid;
+    grid-row: 1 / span var(--rows);
+}
+
+.grid-cell {
+    display: block;
+    border: 1px solid black;
+}
+
+.grid-cell:hover {
+    background: red;
+}
